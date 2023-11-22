@@ -1,0 +1,4 @@
+@Suppress("RedundantSuspendModifier")
+suspend fun fetchFollowersCR(): FollowerResponse {
+    return getFollowerResponseStub()
+}

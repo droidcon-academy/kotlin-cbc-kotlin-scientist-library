@@ -1,0 +1,7 @@
+// add property
+val roomDbDataSource: RoomDbDataSource = RoomDbDataSource(context)
+
+// add to end of the setup() method
+if (!roomDbDataSource.isInitialized()) {
+    roomDbDataSource.insertDictionary(loremIpsumDictionary.wordList)
+}
