@@ -20,7 +20,11 @@ class ConnectionApi {
             Follower(2L, "Jane"),
             Follower(3L, "Monaco"),
             Follower(4L, "Nousha"),
-            Follower(5L, "Jane"),
+            Follower(5L, "Anthony"),
+            Follower(6L, "Laurie"),
+            Follower(7L, "Alan"),
+            Follower(8L, "Tobi"),
+            Follower(9L, "Pranesh"),
         )
     )
 }
