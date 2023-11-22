@@ -42,7 +42,7 @@ fun RegistrationScreen(emailValidatorExperiment: EmailValidatorExperiment) {
                 emailValidatorExperiment.launch(emailField, { isValid ->
                     isEmailValid = isValid
                     isNextButtonEnabled = isEmailValid
-                }, { }) { result ->
+                }, { /* error handling */ }) { result ->
                     resultPayload = result
                 }
             },
