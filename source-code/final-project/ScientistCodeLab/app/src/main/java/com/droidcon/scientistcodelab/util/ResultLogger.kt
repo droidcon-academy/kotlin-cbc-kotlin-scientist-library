@@ -1,28 +1,27 @@
 package com.droidcon.scientistcodelab.util
 
 import android.util.Log
-import com.droidcon.scientistcodelab.connections.GetFollowersExperiment
 import com.github.spoptchev.scientist.Result
 import com.github.spoptchev.scientist.isSuccess
 
 object ResultLogger {
     fun log(result: Result<*, *>) {
         val resultMessage = if (result.matched) "Matching" else "Mismatch"
-        Log.d(GetFollowersExperiment.experimentName, "${result.experimentName} : $resultMessage")
+        Log.d("ExperimentLogger", "${result.experimentName} : $resultMessage")
         Log.d(
-            GetFollowersExperiment.experimentName,
+            "ExperimentLogger",
             "Control isSuccess: ${result.controlObservation.outcome.isSuccess()}"
         )
         Log.d(
-            GetFollowersExperiment.experimentName,
+            "ExperimentLogger",
             "Candidate isSuccess: ${result.candidateObservations.first().outcome.isSuccess()}"
         )
         Log.d(
-            GetFollowersExperiment.experimentName,
+            "ExperimentLogger",
             "Control Duration: ${result.controlObservation.duration.millis()}ms"
         )
         Log.d(
-            GetFollowersExperiment.experimentName,
+            "ExperimentLogger",
             "Candidate Duration: ${result.candidateObservations.first().duration.millis()}ms"
         )
     }
