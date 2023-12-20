@@ -1,10 +1,9 @@
 suspend fun getFollowersCoroutine(): List<Follower> {
-    val result: List<Follower>
+    var result: List<Follower> = emptyList()
     try {
         result = connectionApi.fetchFollowersCR().followers
     } catch (error: Exception) {
         errorLogger.log("FetchFollower error", error)
-        throw error
     }
     return result
 }
