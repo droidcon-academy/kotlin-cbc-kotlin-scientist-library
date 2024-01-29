@@ -4,13 +4,13 @@ import io.reactivex.rxjava3.core.Single
 
 class ConnectionApi {
     fun fetchFollowersSingle(): Single<FollowerResponse> =
-        Single.just(getFollowerResponseStub())
-    // Single.error(RuntimeException(""))    // simulate error
+//        Single.just(getFollowerResponseStub())
+     Single.error(RuntimeException(""))    // simulate error
 
     @Suppress("RedundantSuspendModifier")
     suspend fun fetchFollowersCR(): FollowerResponse {
-        return getFollowerResponseStub()
-//         throw RuntimeException("") // simulate error
+//        return getFollowerResponseStub()
+         throw RuntimeException("") // simulate error
     }
 
     private fun getFollowerResponseStub() = FollowerResponse(
